@@ -1,6 +1,11 @@
 #!/bin/bash
 
-path=".github/workflows/action.yml"
+if [ $# = 0 ]; then
+    echo ファイル名指定してください
+    exit 1
+fi
+
+path=".github/workflows/${1}.yml"
 
 mkdir -p "$(dirname "$path")"  && touch $path
 
