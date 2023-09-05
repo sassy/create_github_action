@@ -9,7 +9,7 @@ path=".github/workflows/${1}.yml"
 
 mkdir -p "$(dirname "$path")"  && touch $path
 
-cat << EOF > .github/workflows/action.yml
+cat << EOF > $path
 name: sample-actions
 run-name: sample GitHub Actions
 on: [push]
